@@ -242,7 +242,7 @@ ig.module(
 			loadResponse: function( data ) {
 				
 				var jsonMatch = data.match( /\/\*JSON\[\*\/([\s\S]*?)\/\*\]JSON\*\// );
-				pj = $.parseJSON( jsonMatch ? jsonMatch[1] : data );
+				var pj = $.parseJSON( jsonMatch ? jsonMatch[1] : data );
 				
 				for (var i = 0; i < pj.layer.length; i++) {
 					ig.MapMinifier.decompressLayer(pj.layer[i]);
